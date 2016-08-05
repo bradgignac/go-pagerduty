@@ -1,0 +1,16 @@
+pipelines:
+  go-pagerduty:
+    group: SRE
+    locking: on
+    materials:
+      github:
+        git: https://github.com/PagerDuty/go-pagerduty.git
+        branch: gocd
+    stages:
+      - build:
+          clean_workspace: true
+          jobs:
+            Build:
+              tasks:
+               - exec:
+                   command: make
