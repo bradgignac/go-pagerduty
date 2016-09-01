@@ -56,6 +56,7 @@ type SupportHoursDetails struct {
 
 type IncidentUrgencyRule struct {
 	Type                string       `json:"type,omitempty"`
+	Urgency             string       `json:"urgency,omitempty"`
 	DuringSupportHours  SupportHours `json:"during_support_hours,omitempty"`
 	OutsideSupportHours SupportHours `json:"outside_support_hours,omitempty"`
 }
